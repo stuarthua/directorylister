@@ -20,7 +20,8 @@ return array(
         'favicon.ico',
         'robots.txt',
         'footer.php',
-        'nginx.conf'
+        'nginx.conf',
+        '*/@eaDir*',
     ),
 
     // Files that, if present in a directory, make the directory
