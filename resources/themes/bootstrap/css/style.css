@@ -140,3 +140,273 @@ body.breadcrumb-fixed {
     }
 
 }
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| Readme |----------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/* -----| Readme |----------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.readme-background {
+    margin-top: 20px;;
+    margin-bottom: 20px;
+    background-color: #fff;
+    /* border: 1px solid #d1d5da; */
+    border-radius: 3px;
+    /* line-height: 1.25; */
+}
+
+.Box-header {
+    background-color: #f6f8fa;
+    border: 1px solid #d1d5da;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    /* margin: -1px -1px 0; */
+    padding: 8px 16px;
+}
+
+.px-2 {
+    padding-right: 8px!important;
+    padding-left: 8px!important;
+}
+
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.Box-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.pr-3 {
+    padding-right: 16px!important;
+}
+
+.octicon {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: text-top;
+    vertical-align: text-bottom;
+}
+
+.readme {
+    background-color: #fefefe;
+    padding: 20px;
+    /* margin-top: 30px; */
+    /* border: 1px solid #ececec; */
+    border: 1px solid #d1d5da;
+    border-top: 0px;
+    /*overflow 属性规定当内容溢出元素框时发生的事情*/
+    /*auto 如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。*/
+    overflow: auto;
+    /*允许在单词内换行*/
+    word-break: break-all;
+}
+
+.readme hr {
+    border-top: 1px solid #dedede;
+    margin-top: 10px;
+}
+
+.readme h1 {
+    font-size: 26px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dadada;
+}
+
+.readme h2 {
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+.readme h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dadada;
+}
+
+.readme h4 {
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    text-indent: 0;
+}
+
+.readme h1:hover .header-anchor,
+.readme h2:hover .header-anchor,
+.readme h3:hover .header-anchor,
+.readme h4:hover .header-anchor,
+.readme h5:hover .header-anchor,
+.readme h6:hover .header-anchor {
+    /* 锚点显示 */
+    opacity: 1;
+}
+
+.readme a.header-anchor {
+    font-size: .85em;
+    float: left;
+    margin-left: -.87em;
+    padding-right: .23em;
+    margin-top: .125em;
+    /* 锚点完全透明隐藏 */
+    opacity: 0;
+}
+
+.readme ul {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.readme p {
+    /* 文本块中首行文本的缩进 */
+    text-indent: 0px;
+}
+
+.readme pre {
+    margin: 10px 0px;
+}
+
+.readme blockquote {
+    border-left: 5px solid #ccc;
+    background-color: #f1f1f1;
+    color: #222;
+    font-size: 15px;
+    transition: 0.3s;
+    /* padding: 10px 0px; */
+    margin: 10px 0px;
+}
+
+.readme blockquote:hover {
+    border-left: 5px solid #159e83;
+    background-color: #eee;
+    transition: 0.3s;
+}
+
+.readme blockquote::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f10d";
+    font-size: 16px;
+    font-style: normal;
+    line-height: 0;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    margin-top: 10px;
+    margin-left: -39px;
+    transition: 0.3s;
+}
+
+.readme blockquote:hover::before {
+    color: #222;
+    transition: 0.3s;
+}
+
+.readme ul li {
+    list-style: disc;
+}
+
+.readme ul li::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /* content: "\f105"; */
+    font-size: 16px;
+    font-style: normal;
+    line-height: 0.5;
+    -webkit-font-smoothing: antialiased;
+    color: #222;
+    text-indent: 0;
+    margin-top: 10px;
+    margin-left: -39px;
+    padding-left: 20px;
+    transition: 0.3s;
+}
+
+.readme ul li:hover::before {
+    padding-left: 26px;
+    transition: 0.3s;
+    /* content: "\f101"; */
+}
+
+.readme table {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    margin-bottom: 16px;
+    text-indent: 0;
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.readme table th {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+.readme table tr {
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.readme table tr:hover {
+    background-color: #f9f9f9;
+    transition: 0.3s;
+}
+
+.readme table td,
+.readme table th {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px;
+}
+
+.readme table td {
+    /* 溢出的内容部分使用省略号 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.readme table td:hover {
+    font-weight: 900;
+    background-color: #c0e712;
+}
+
+.readme img {
+    max-width: 100%;
+    height: auto;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.announcement {
+    color: #777;
+    border-bottom: solid 3px #d0d0d0;
+    background-color: #f8f8f8;
+    padding: 10px 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.announcement:hover {
+    border-bottom: solid 3px #159e83;
+    transition: 0.3s;
+}

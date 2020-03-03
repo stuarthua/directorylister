@@ -6,3 +6,18 @@
 ## Preview
 
 ![](https://raw.githubusercontent.com/stuarthua/PicGo/master/tmp/Snipaste_2020-02-09_07-48-15.png)
+
+```java
+public static func(){
+    Systemctl.echo("hello world.");
+}
+
+```
+
+
+```bash
+public static func(){
+    Systemctl.echo("hello world.");
+}
+echo 'hello'
+```

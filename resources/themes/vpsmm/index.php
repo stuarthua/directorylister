@@ -6,6 +6,8 @@
     $web_title = $lister->getConfig('web_title');
     // 当前路径
     $listed_path = $lister->getAbsoluteListedPath();
+    // 当前目录中的 README 文档内容
+    $readme_html = $lister->getReadme();
 ?>
 
 <html>
@@ -27,11 +29,15 @@
         <link rel="stylesheet" href="/<?php echo THEMEPATH; ?>/font-awesome/css/font-awesome.min.css">
         <link href="/<?php echo THEMEPATH; ?>/flat-ui/css/flat-ui.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/<?php echo THEMEPATH; ?>/css/style.css">
+        <!-- 代码高亮样式 -->
+        <link rel="stylesheet" href="/<?php echo THEMEPATH; ?>/css/prism.css" />
 
         <!-- SCRIPTS -->
         <script type="text/javascript" src="/<?php echo THEMEPATH; ?>/js/jquery.min.js"></script>
         <script src="/<?php echo THEMEPATH; ?>/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/<?php echo THEMEPATH; ?>/js/directorylister.js"></script>
+        <!-- 代码高亮 JS 依赖 -->
+        <script src="/<?php echo THEMEPATH; ?>/js/prism.js"></script>
 
 
         <!-- META -->
@@ -141,6 +147,28 @@
 
             </ul>
         </div>
+
+        <!-- READMNE start -->
+        <?php
+        if ($readme_html != "") {
+            // 多行字符串开始
+            $readme_top = '
+                        <div class="container readme-background" id="readmeTop">
+                            <div class="Box-header px-2 clearfix">
+                                <h3 class="Box-title pr-3">
+                                    <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                                        <path fill-rule="evenodd" 
+                                            d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z">
+                                        </path>
+                                    </svg> README
+                                </h3>
+                            </div>
+                            <div class="readme" id="readme">
+                            ';
+            echo $readme_top . $readme_html . "</div></div>";
+        }
+        ?>
+        <!-- READMNE end -->
 
         <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
 
