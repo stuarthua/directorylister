@@ -122,6 +122,8 @@
             </ul>
         </div>
 
+        <?php file_exists('readme.php') ? include('readme.php') : include($lister->getThemePath(true) . "/default_readme.php"); ?>
+
         <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
 
     </body>

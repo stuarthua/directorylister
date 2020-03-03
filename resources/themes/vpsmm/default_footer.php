@@ -1,5 +1,5 @@
 <hr>
 
 <div class="footer">
-    Copyright © Stuart Hua
+    Copyright © <?php echo date('Y') ?>
 </div>
