@@ -302,7 +302,7 @@ body.breadcrumb-fixed {
     position: absolute;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f10d";
+    /* content: "\f10d"; */
     font-size: 16px;
     font-style: normal;
     line-height: 0;
