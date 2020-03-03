@@ -624,11 +624,11 @@ class DirectoryLister {
                         }
 
                         // Add file info to the array
-                        $directoryArray['..'] = array(
+                        $directoryArray['返回上一层'] = array(
                             'file_path'  => $this->_appURL . $directoryPath,
                             'url_path'   => $this->_appURL . $directoryPath,
                             'file_size'  => '-',
-                            'mod_time'   => date($this->_config['date_format'], filemtime($realPath)),
+                            // 'mod_time'   => date($this->_config['date_format'], filemtime($realPath)),
                             'icon_class' => 'fa-level-up',
                             'sort'       => 0
                         );

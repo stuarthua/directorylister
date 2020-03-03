@@ -9,7 +9,7 @@ return array(
     'list_folders_first'        => true,
     'list_sort_order'           => 'natcasesort',
     // theme - bootstrap, vpsmm
-    'theme_name'                => 'bootstrap',
+    'theme_name'                => 'vpsmm',
     'date_format'               => 'Y-m-d H:i:s', // See: http://php.net/manual/en/function.date.php
 
     // Hidden files
