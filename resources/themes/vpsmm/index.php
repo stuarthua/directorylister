@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 
+<?php
+    header("Content-type: text/html; charset=utf-8");
+    // 网站名称
+    $web_title = $lister->getConfig('web_title');
+    // 当前路径
+    $listed_path = $lister->getAbsoluteListedPath();
+?>
+
 <html>
 
     <head>
 
-        <title>Directory listing of <?php echo $lister->getListedPath(); ?> 下载服务器</title>
+        <!-- Title -->
+        <?php if ($listed_path != "") : ?>
+            <title><?php echo $web_title . " | " . $listed_path; ?></title>
+        <?php else : ?>
+            <title><?php echo $web_title; ?></title>
+        <?php endif; ?>
+
+        <!-- Favicon -->
         <link rel="shortcut icon" href="/<?php echo THEMEPATH; ?>/img/favicon.ico">
 
         <!-- STYLES -->
@@ -115,6 +130,11 @@
 
                         </a>
 
+                        <?php if (is_file($fileInfo['file_path'])): ?>
+                            <a href="javascript:void(0)" class="file-info-button">
+                                <i class="fa fa-info-circle"></i>
+                            </a>
+                        <?php endif; ?>
 
                     </li>
                 <?php endforeach; ?>
@@ -122,9 +142,40 @@
             </ul>
         </div>
 
-        <?php file_exists('readme.php') ? include('readme.php') : include($lister->getThemePath(true) . "/default_readme.php"); ?>
-
         <?php file_exists('footer.php') ? include('footer.php') : include($lister->getThemePath(true) . "/default_footer.php"); ?>
+
+        <div id="file-info-modal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">{{modal_header}}</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <table id="file-info" class="table table-bordered">
+                            <tbody>
+
+                                <tr>
+                                    <td class="table-title">MD5</td>
+                                    <td class="md5-hash">{{md5_sum}}</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="table-title">SHA1</td>
+                                    <td class="sha1-hash">{{sha1_sum}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </body>
 

@@ -3,10 +3,12 @@
 return array(
 
     // Basic settings
+    'web_title'                 => '文件目录列表',
     'home_label'                => 'Home',
     'hide_dot_files'            => true,
     'list_folders_first'        => true,
     'list_sort_order'           => 'natcasesort',
+    // theme - bootstrap, vpsmm
     'theme_name'                => 'bootstrap',
     'date_format'               => 'Y-m-d H:i:s', // See: http://php.net/manual/en/function.date.php
 
@@ -18,15 +20,9 @@ return array(
         'resources/*',
         'analytics.inc',
         'header.php',
-        'footer.php'
+        'favicon.ico',
+        '*/@eaDir*',
     ),
-
-    // If set to 'true' an directory with an index file (as defined below) will
-    // become a direct link to the index page instead of a browsable directory
-    'links_dirs_with_index' => false,
-
-    // Make linked directories open in a new (_blank) tab
-    'external_links_new_window' => true,
 
     // Files that, if present in a directory, make the directory
     // a direct link rather than a browse link.
