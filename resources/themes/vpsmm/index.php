@@ -196,6 +196,11 @@
                                     <td class="sha1-hash">{{sha1_sum}}</td>
                                 </tr>
 
+                                <tr>
+                                    <td class="table-title">SHA256</td>
+                                    <td class="sha256-hash">{{sha256_sum}}</td>
+                                </tr>
+
                             </tbody>
                         </table>
 

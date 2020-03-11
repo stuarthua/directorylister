@@ -429,14 +429,16 @@ class DirectoryLister {
         if (filesize($filePath) > $this->_config['hash_size_limit']) {
 
             // Notify user that file is too large
-            $hashArray['md5']  = '[ File size exceeds threshold ]';
-            $hashArray['sha1'] = '[ File size exceeds threshold ]';
+            $hashArray['md5']  = '[ 文件太大，超过阀值 ]';
+            $hashArray['sha1'] = '[ 文件太大，超过阀值 ]';
+            $hashArray['sha256'] = '[ 文件太大，超过阀值 ]';
 
         } else {
 
             // Generate file hashes
             $hashArray['md5']  = hash_file('md5', $filePath);
             $hashArray['sha1'] = hash_file('sha1', $filePath);
+            $hashArray['sha256'] = hash_file('sha256', $filePath);
 
         }
 

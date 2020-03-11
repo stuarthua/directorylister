@@ -29,6 +29,7 @@ $(document).ready(function() {
 
         $('#file-info .md5-hash').text('Loading...');
         $('#file-info .sha1-hash').text('Loading...');
+        $('#file-info .sha256-hash').text('Loading...');
         $('#file-info .filesize').text('Loading...');
 
         $.ajax({
@@ -42,6 +43,7 @@ $(document).ready(function() {
                 // Set modal pop-up hash values
                 $('#file-info .md5-hash').text(obj.md5);
                 $('#file-info .sha1-hash').text(obj.sha1);
+                $('#file-info .sha256-hash').text(obj.sha256);
                 $('#file-info .filesize').text(obj.size);
 
             }
