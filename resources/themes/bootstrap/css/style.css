@@ -410,3 +410,11 @@ tbody tr:nth-child(odd) {
     border-bottom: solid 3px #159e83;
     transition: 0.3s;
 }
+
+/* custom */
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width:710px;
+    }
+}
